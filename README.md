@@ -1,2 +1,2 @@
 # MyServer
-server
+server1
