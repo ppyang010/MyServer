@@ -22,6 +22,7 @@ public class MyBaits {
 	  
 	    @Test  
 	    public void test1() {  
+	    System.out.println("ok");
 	     User user = userService.getUserById(14);  
          System.out.println(user.getUsername()); 
 //         SqlSession sqlSession = sqlSessionFactory.openSession();

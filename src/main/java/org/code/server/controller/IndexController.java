@@ -31,4 +31,12 @@ public class IndexController {
 	        model.addAttribute("user", user);  
 			return "showUser";
 		}
+		
+		@RequestMapping("/freeUser")
+		public String freeUserMethod(HttpServletRequest request,Model model) {
+			int userId = Integer.parseInt(request.getParameter("id"));  
+	        User user = this.userService.getUserById(userId);  
+	        model.addAttribute("user", user);  
+			return "test";
+		}
 }

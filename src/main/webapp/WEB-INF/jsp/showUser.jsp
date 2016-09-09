@@ -8,5 +8,6 @@
 </head>
 <body>
 hello
+${user.username}
 </body>
 </html>
