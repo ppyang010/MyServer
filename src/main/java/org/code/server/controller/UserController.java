@@ -13,18 +13,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Scope("prototype")//多例
-@RequestMapping("/")
-public class IndexController {
+@RequestMapping("/user")
+public class UserController {
 	
 		@Resource  
 	    private IUserService userService;
 		
 		
-		@RequestMapping("/index")
-		public String indexMethod(Model model) {
-			return "index";
-		}
-		@RequestMapping("/user")
+		
+		@RequestMapping("/show")
 		public String userMethod(HttpServletRequest request,Model model) {
 			int userId = Integer.parseInt(request.getParameter("id"));  
 	        User user = this.userService.getUserById(userId);  
