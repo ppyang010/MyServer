@@ -4,7 +4,10 @@ package org.code.server.controller;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.code.server.model.News;
+import org.code.server.model.PageBean;
 import org.code.server.model.User;
+import org.code.server.service.INewsService;
 import org.code.server.service.IUserService;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -19,9 +22,12 @@ public class IndexController {
 		@Resource  
 	    private IUserService userService;
 		
+		@Resource 
+		private INewsService newsService;
 		
 		@RequestMapping("/index")
 		public String indexMethod(Model model) {
+			PageBean<News> pageBean=newsService.getListByPage(1,10);
 			return "index";
 		}
 		@RequestMapping("/user")
