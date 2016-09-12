@@ -64,78 +64,30 @@
 
  	</div>
     <div class="mod-info-list">
+      
+  	<#list newsPage.list as news>
+  		
+  		  
       <div class="mod-info">
       	<a href="#" class="info-link">24小时</a>
       	<div class="mod-info-img"><a href="#"><img src="https://imgs.bipush.com/article/cover/201605/16/184517485073.jpg?imageView2/1/w/220/h/124/imageMogr2/strip/interlace/1/quality/85/format/jpg"></a></div>
       	<div class="mod-info-art">
 
-      		<h3><a href="">130岁的奔驰和100岁的宝马都在大力发展电动汽车，他们能获得“特斯拉杀手”的称号吗？</a></h3>
+      		<h3><a href="">	${news.title}</a></h3>
       		<div class="mod-author">
       		<div class="author-face"><a href="#"><img src="https://imgs.bipush.com/auth/data/avatar/3.jpg!40x40?imageMogr2/strip/interlace/1/quality/85/format/jpg"></a></div>
-      		<a href="#"><span class="author-name">话题小助手</span></a>
-      		<span class="time">22小时前</span>
+      		<a href="#"><span class="author-name">${news.artfrom}</span></a>
+      		<span class="time"></span>
       		<i class="icon icon-cmt"></i>
       		<em>19</em>
       		<i class="icon icon-fvr"></i>
       		<em>31</em>
       		</div>
-      		<div class="mod-sub">130岁的奔驰和110岁的宝马都开始扩充电动车产品线</div>
+      		<div class="mod-sub">${news.lead ! ""}</div>
       	</div>
       </div>
-    <div class="mod-info">
-      	<a href="#" class="info-link">24小时</a>
-      	<div class="mod-info-img"><a href="#"><img src="https://imgs.bipush.com/article/cover/201605/16/184517485073.jpg?imageView2/1/w/220/h/124/imageMogr2/strip/interlace/1/quality/85/format/jpg"></a></div>
-      	<div class="mod-info-art">
-
-      		<h3><a href="">130岁的奔驰和100岁的宝马都在大力发展电动汽车，他们能获得“特斯拉杀手”的称号吗？</a></h3>
-      		<div class="mod-author">
-      		<div class="author-face"><a href="#"><img src="https://imgs.bipush.com/auth/data/avatar/3.jpg!40x40?imageMogr2/strip/interlace/1/quality/85/format/jpg"></a></div>
-      		<a href="#"><span class="author-name">话题小助手</span></a>
-      		<span class="time">22小时前</span>
-      		<i class="icon icon-cmt"></i>
-      		<em>19</em>
-      		<i class="icon icon-fvr"></i>
-      		<em>31</em>
-      		</div>
-      		<div class="mod-sub">130岁的奔驰和110岁的宝马都开始扩充电动车产品线</div>
-      	</div>
-      </div>
-      <div class="mod-info">
-      	<a href="#" class="info-link">24小时</a>
-      	<div class="mod-info-img"><a href="#"><img src="https://imgs.bipush.com/article/cover/201605/16/184517485073.jpg?imageView2/1/w/220/h/124/imageMogr2/strip/interlace/1/quality/85/format/jpg"></a></div>
-      	<div class="mod-info-art">
-
-      		<h3><a href="">130岁的奔驰和100岁的宝马都在大力发展电动汽车，他们能获得“特斯拉杀手”的称号吗？</a></h3>
-      		<div class="mod-author">
-      		<div class="author-face"><a href="#"><img src="https://imgs.bipush.com/auth/data/avatar/3.jpg!40x40?imageMogr2/strip/interlace/1/quality/85/format/jpg"></a></div>
-      		<a href="#"><span class="author-name">话题小助手</span></a>
-      		<span class="time">22小时前</span>
-      		<i class="icon icon-cmt"></i>
-      		<em>19</em>
-      		<i class="icon icon-fvr"></i>
-      		<em>31</em>
-      		</div>
-      		<div class="mod-sub">130岁的奔驰和110岁的宝马都开始扩充电动车产品线</div>
-      	</div>
-      </div>
-      <div class="mod-info">
-      	<a href="#" class="info-link">24小时</a>
-      	<div class="mod-info-img"><a href="#"><img src="https://imgs.bipush.com/article/cover/201605/16/184517485073.jpg?imageView2/1/w/220/h/124/imageMogr2/strip/interlace/1/quality/85/format/jpg"></a></div>
-      	<div class="mod-info-art">
-
-      		<h3><a href="">130岁的奔驰和100岁的宝马都在大力发展电动汽车，他们能获得“特斯拉杀手”的称号吗？</a></h3>
-      		<div class="mod-author">
-      		<div class="author-face"><a href="#"><img src="https://imgs.bipush.com/auth/data/avatar/3.jpg!40x40?imageMogr2/strip/interlace/1/quality/85/format/jpg"></a></div>
-      		<a href="#"><span class="author-name">话题小助手</span></a>
-      		<span class="time">22小时前</span>
-      		<i class="icon icon-cmt"></i>
-      		<em>19</em>
-      		<i class="icon icon-fvr"></i>
-      		<em>31</em>
-      		</div>
-      		<div class="mod-sub">130岁的奔驰和110岁的宝马都开始扩充电动车产品线</div>
-      	</div>
-      </div>
+      
+      </#list>    
     </div>
   </div>
   <div class="side">
