@@ -22,7 +22,7 @@ public class test {
 		Elements nodes = doc.select("body .product");
 		for(Element e:nodes){
 			String imgurl=e.select(".productImg-wrap  img").attr("data-ks-lazyload");//图片地址
-			if(imgurl.equals("")||imgurl==null){//若data-ks-lazyload属性不存在
+			if(null==imgurl||"".equals(imgurl)){//若data-ks-lazyload属性不存在
 				imgurl=e.select(".productImg-wrap  img").attr("src");//图片地址
 			}
 			String title = e.select(".productTitle > a").attr("title");//标题
