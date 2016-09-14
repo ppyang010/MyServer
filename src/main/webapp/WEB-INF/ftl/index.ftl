@@ -1,6 +1,6 @@
 
 <#include "/marco/basePageMarco.ftl">
-<@basePage base_title="首页"  >
+<@basePage base_title="首页"  base_css=["/resource/common.css"]>
 
 <div class="body">
 

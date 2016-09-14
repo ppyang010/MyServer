@@ -6,10 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>${base_title}</title>
-<link rel="stylesheet" type="text/css" href="${basePath}/resource/common.css">
-<style type="text/css">
 
-</style>
+<#list base_css as css>
+	<link rel="stylesheet" type="text/css" href="${basePath}${css}">
+</#list>
+
 </head>
 <body>
 <header >

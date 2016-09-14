@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="org.code.server.dao.NewsMapper" >
+<mapper namespace="news" >
   <resultMap id="BaseResultMap" type="org.code.server.model.News" >
     <id column="nid" property="nid" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
@@ -173,4 +173,21 @@
       count = #{count,jdbcType=INTEGER}
     where nid = #{nid,jdbcType=INTEGER}
   </update>
+  
+  <select id="getListByPage" parameterType="java.util.Map" resultMap="BaseResultMap">
+  		select <include refid="Base_Column_List"></include> from news 
+  		<where>
+  			<if test="keyword!=null and keyword !=''"> 
+			 	keyword like '%${keyword}%'
+			</if> 
+			<if test="ishot!=null and ishot !=''">
+			 	and ishot=#{ishot}
+			</if>
+  		</where>
+  		
+  		<if test="start != null  ">
+  			limit #{start} , #{limit}
+  		</if>
+  
+  </select>
 </mapper>

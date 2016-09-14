@@ -1,5 +1,9 @@
-F:\ccy\testcode\hkb_bysj\src\main\java\org\hkb\bysj\bean\User.java
-F:\ccy\testcode\hkb_bysj\src\main\java\org\hkb\bysj\dao\UserMapper.java
-F:\ccy\testcode\hkb_bysj\src\main\java\org\hkb\bysj\controller\IndexController.java
-F:\ccy\testcode\hkb_bysj\src\main\java\org\hkb\bysj\service\impl\UserServiceImpl.java
-F:\ccy\testcode\hkb_bysj\src\main\java\org\hkb\bysj\service\IUserService.java
+F:\ccy\testcode\MyServer\src\main\java\org\code\server\dao\impl\BaseDao.java
+F:\ccy\testcode\MyServer\src\main\java\org\code\server\service\impl\UserServiceImpl.java
+F:\ccy\testcode\MyServer\src\main\java\org\code\server\service\IUserService.java
+F:\ccy\testcode\MyServer\src\main\java\org\code\server\model\News.java
+F:\ccy\testcode\MyServer\src\main\java\org\code\server\model\User.java
+F:\ccy\testcode\MyServer\src\main\java\org\code\server\controller\IndexController.java
+F:\ccy\testcode\MyServer\src\main\java\org\code\server\dao\IUserDao.java
+F:\ccy\testcode\MyServer\src\main\java\org\code\server\controller\UserController.java
+F:\ccy\testcode\MyServer\src\main\java\org\code\server\dao\impl\UserDao.java

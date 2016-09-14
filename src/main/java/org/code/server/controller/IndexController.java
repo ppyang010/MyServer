@@ -47,4 +47,10 @@ public class IndexController {
 	        model.addAttribute("user", user);  
 			return "test";
 		}
+		
+		@RequestMapping("/article")
+		public String article(HttpServletRequest request,Model model){
+			
+			return "articlePage";
+		}
 }
