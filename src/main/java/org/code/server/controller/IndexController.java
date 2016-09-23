@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @Scope("prototype")//多例
@@ -21,7 +22,6 @@ public class IndexController {
 	
 		@Resource  
 	    private IUserService userService;
-		
 		@Resource 
 		private INewsService newsService;
 		
@@ -34,7 +34,7 @@ public class IndexController {
 		}
 		@RequestMapping("/user")
 		public String userMethod(HttpServletRequest request,Model model) {
-			int userId = Integer.parseInt(request.getParameter("id"));  
+		    int userId = Integer.parseInt(request.getParameter("id"));  
 	        User user = this.userService.getUserById(userId);  
 	        model.addAttribute("user", user);  
 			return "showUser";
@@ -52,5 +52,12 @@ public class IndexController {
 		public String article(HttpServletRequest request,Model model){
 			
 			return "articlePage";
+		}
+		@ResponseBody
+		@RequestMapping("/getTestDate")
+		public User getTestDate(HttpServletRequest request,Model model){
+			User user =new User();
+			user.setUsername("ccy");
+			return user;
 		}
 }

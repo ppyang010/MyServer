@@ -13,7 +13,7 @@
 
 </head>
 <body>
-<header >
+<header>
 
 	<div class="container .clearfix">
 		<div class="navbar-header">

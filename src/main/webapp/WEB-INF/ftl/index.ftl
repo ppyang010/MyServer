@@ -28,7 +28,7 @@
       	<div class="mod-info-img"><a href="#"><img src="https://imgs.bipush.com/article/cover/201605/16/184517485073.jpg?imageView2/1/w/220/h/124/imageMogr2/strip/interlace/1/quality/85/format/jpg"></a></div>
       	<div class="mod-info-art">
 
-      		<h3><a href="">	${news.title}</a></h3>
+      		<h3><a href="${basePath}/article">	${news.title}</a></h3>
       		<div class="mod-author">
       		<div class="author-face"><a href="#"><img src="https://imgs.bipush.com/auth/data/avatar/3.jpg!40x40?imageMogr2/strip/interlace/1/quality/85/format/jpg"></a></div>
       		<a href="#"><span class="author-name">${news.artfrom}</span></a>
