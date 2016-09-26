@@ -50,7 +50,7 @@ function hello(){
 var p=new pager({
     domID:"pageDIV",
     method:'get',
-    url:'${pageContext.request.contextPath}/getTestDate',
+    url:'${pageContext.request.contextPath}/getTestDate2',
     pagesize:5,
     curpage:1,
     data:{},
@@ -60,6 +60,15 @@ var p=new pager({
     }
 });
 
+/* ajax({
+dataType:'jsonp',
+url:'http://127.0.0.1:811/MyServer/getTestJsonpDate',
+data:{},
+success:function(data){
+	console.log(data);
+}	
+
+}); */
 
 
 </script>

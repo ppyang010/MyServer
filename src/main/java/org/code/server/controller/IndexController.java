@@ -1,8 +1,11 @@
 package org.code.server.controller;
 
 
+import java.io.IOException;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.code.server.model.News;
 import org.code.server.model.PageBean;
@@ -59,5 +62,22 @@ public class IndexController {
 			User user =new User();
 			user.setUsername("ccy");
 			return user;
+		}
+		@ResponseBody
+		@RequestMapping("/getTestDate2")
+		public String getTestDate2(HttpServletRequest request,Model model){
+			PageBean<User> p=new PageBean<>();
+			return p.toJson();
+		}
+		
+		@RequestMapping("/getTestJsonpDate")
+		public void getTestJsonpDate(HttpServletRequest request,HttpServletResponse response,Model model){
+			
+			String jsonp=request.getParameter("callback");
+			try {
+				response.getWriter().write(jsonp+"('hello jsonp')");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 }

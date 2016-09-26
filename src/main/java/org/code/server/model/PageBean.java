@@ -49,5 +49,10 @@ public class PageBean<T> {
 	public void setList(List<T> list) {
 		this.list = list;
 	}
+	//{total:15,rows:[{name:'test',age:12},{name:'test2',age:18}]}	
+	public String toJson(){
+		return "{'total':20,'rows':[{'name':'test1','age':'12',sex:'男'},{'name':'test2','age':'18',sex:'女'}]}";
+		
+	}
 	
 }
